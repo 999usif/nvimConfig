@@ -1,3 +1,6 @@
+-- Set line-numbers
+vim.cmd("set number")
+
 -- Set tab = 4 spaces
 vim.cmd("set expandtab")
 vim.cmd("set tabstop=4")
