@@ -31,7 +31,7 @@ $ -> ¤
     (¤d for delete after cursor)
 
 
-# shit
+# useful default vim bindings
 dw -> delete from cursor position of current word to end of word
 (number)j -> jump down (number) lines in NORMAL mode
 (number)k -> jump up (number) lines in NORMAL mode
