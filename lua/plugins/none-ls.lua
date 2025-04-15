@@ -3,26 +3,31 @@
 
 --For none-ls-extras:: Use require("none-ls.METHOD.TOOL") instead of null_ls.builtins.METHOD.TOOL to use these extras.
 return {
-    "nvimtools/none-ls.nvim",
-    dependencies = {
-        "nvimtools/none-ls-extras.nvim",
-    },
-    config = function()
-        local null_ls = require("null-ls")
-        null_ls.setup({
-            sources = {
-                -- builtins.diagnostics for diagnostics tools
-                -- builtins.formatting for formatting tools
-                -- Lua Formatter
-                null_ls.builtins.formatting.stylua,
+  "nvimtools/none-ls.nvim",
+  dependencies = {
+    "nvimtools/none-ls-extras.nvim",
+  },
+  config = function()
+    local null_ls = require("null-ls")
+    null_ls.setup({
+      debug = true,
+      sources = {
+        -- builtins.diagnostics for diagnostics tools
+        -- builtins.formatting for formatting tools
+        -- Lua Formatter
+        null_ls.builtins.formatting.stylua,
 
-                -- JS Formatter
-                null_ls.builtins.formatting.prettierd,
-                -- JS linter
-                -- (Depreceated): null_ls.builtins.diagnostics.eslint_d,
-                require("none-ls.diagnostics.eslint_d"),
-            },
-        })
-        vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
-    end,
+        -- JS Formatter
+        null_ls.builtins.formatting.prettierd,
+        -- JS linter
+        -- (Depreceated): null_ls.builtins.diagnostics.eslint_d,
+        require("none-ls.diagnostics.eslint_d"),
+
+        -- Python Formatter
+        null_ls.builtins.formatting.black,
+
+      },
+    })
+    vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
+  end,
 }
