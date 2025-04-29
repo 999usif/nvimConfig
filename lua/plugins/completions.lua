@@ -68,6 +68,22 @@ return {
           { name = "buffer" },
         }),
       })
+      cmp.setup.filetype("tex", {
+        sources = {
+          { name = 'vimtex' },
+          { name = 'luasnip' },
+          { name = 'buffer' },
+        },
+      })
     end,
   },
+  -- Vimtex completions
+  {
+    "micangl/cmp-vimtex",
+    ft = "tex",
+    config = function()
+      require('cmp_vimtex').setup({})
+    end,
+  },
+
 }

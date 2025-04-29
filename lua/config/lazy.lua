@@ -19,11 +19,7 @@ vim.opt.rtp:prepend(lazypath)
 -- loading lazy.nvim so that mappings are correct.
 -- This is also a good place to setup other settings (vim.opt)
 vim.g.mapleader = "ø"
-vim.g.maplocalleader = "\\"
-
--- VimTex stuff
-vim.cmd('filetype plugin on')
-vim.cmd('set encoding=utf-8')
+vim.g.maplocalleader = "æ"
 
 -- Setup lazy.nvim
 require("lazy").setup({

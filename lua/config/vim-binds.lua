@@ -1,5 +1,7 @@
+--------- OPTIONS (should be separated from keybinds) -----------
 -- Set line-numbers
 vim.cmd("set number")
+vim.cmd('set relativenumber')
 
 -- Set tab = 4 spaces
 vim.cmd("set expandtab")
@@ -7,6 +9,7 @@ vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 
+-- this does not work
 return {
   config = function()
     -- Insert mode mapping: Ctrl+E moves to the end of the line
