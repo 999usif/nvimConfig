@@ -21,6 +21,9 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = "ø"
 vim.g.maplocalleader = "\\"
 
+-- VimTex stuff
+vim.cmd('filetype plugin on')
+vim.cmd('set encoding=utf-8')
 
 -- Setup lazy.nvim
 require("lazy").setup({
