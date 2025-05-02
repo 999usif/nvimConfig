@@ -5,5 +5,7 @@ return {
   init = function()
     -- VimTeX configuration goes here, e.g.
     vim.g.vimtex_view_method = "sioyek"
+    -- vim.g.vimtex_compiler_enabled = 0
+    vim.g.vimtex_quickfix_mode = 0
   end
 }

@@ -6,8 +6,9 @@ return {
             options = { theme = 'dracula' },
 
             sections = {
-                lualine_x = {'encoding', 'filetype'},
-                lualine_b = {'branch', 'diff', 'diagnostics'}, 
+                lualine_x = {'lsp_status', 'encoding', 'filetype'},
+                lualine_y = {'progress'},
+                lualine_b = {'branch', 'diff', 'diagnostics'},
             }
          })
     end
