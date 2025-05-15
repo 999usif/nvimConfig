@@ -13,8 +13,23 @@ return {
   {
     "rose-pine/neovim",
     name = "rose-pine",
+    --vim.cmd("colorscheme rose-pine-main")
+
     config = function()
-      vim.cmd("colorscheme rose-pine-main")
-    end
+      require("rose-pine").setup({
+        variant = "dawn",
+
+        -- https://rosepinetheme.com/palette/ingredients/
+        palette = {
+          dawn = {
+            text = '#0b0b10',
+            base = '#e9e5ee',
+          }
+        }
+      })
+
+      vim.cmd("colorscheme rose-pine")
+    end,
+
   },
-  }
+}
